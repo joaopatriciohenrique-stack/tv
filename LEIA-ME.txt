@@ -1,0 +1,88 @@
+JHTV — TV ao vivo grátis
+========================
+
+O que é
+-------
+JHTV é um app de TV ao vivo que abre no navegador. Ele carrega listas de canais
+públicas e gratuitas (canais abertos) e foi feito para ser usado com controle
+remoto ou teclado.
+
+O app não instala nada no seu aparelho: ele roda como uma página. Em celular ou
+tablet dá para "instalar" de verdade usando Adicionar à tela inicial (veja no fim).
+
+
+1. O que você precisa
+---------------------
+- Computador com Windows, macOS ou Linux
+- Node.js 20 ou mais novo (baixe em https://nodejs.org)
+- Internet (as listas de canais vêm da internet)
+
+
+2. Como abrir o app no computador
+---------------------------------
+1) Descompacte o arquivo JHTV.zip em uma pasta qualquer.
+2) Abra o Terminal (macOS/Linux) ou o Prompt de Comando (Windows) dentro dessa pasta.
+3) Digite e aperte Enter:
+
+     npm install
+
+4) Depois digite e aperte Enter:
+
+     npm run dev
+
+5) O terminal mostra um endereço como http://localhost:8080 — abra esse endereço
+   no navegador. O JHTV abre na hora.
+
+
+3. Como abrir na TV
+-------------------
+Na mesma pasta, rode o servidor liberado para a sua rede:
+
+     npm run dev -- --host
+
+O terminal vai mostrar um endereço de rede, por exemplo:
+
+     http://192.168.0.15:8080
+
+Abra esse endereço no navegador da TV (Android TV, Fire TV Stick, Samsung, LG
+com navegador). O celular e a TV precisam estar conectados na mesma rede Wi-Fi.
+
+Se a TV não tiver navegador, você pode espelhar a tela do celular ou do
+computador para a TV (Chromecast, Miracast, AirPlay).
+
+
+4. Instalar como app no celular
+-------------------------------
+Abra o endereço do JHTV no navegador do celular e depois:
+- iPhone (Safari): botão Compartilhar > "Adicionar à Tela de Início"
+- Android (Chrome): menu ⋮ > "Adicionar à tela inicial" ou "Instalar app"
+
+Vai aparecer o ícone JHTV e o app abre em tela cheia, como um aplicativo.
+
+
+5. Como navegar
+---------------
+- Setas ▲▼◀▶  — andar pelo menu e pela lista de canais
+- OK / Enter  — abrir o canal escolhido
+- ← Voltar    — fechar o menu ou voltar
+- F           — tela cheia
+- digitar     — buscar canal por nome
+
+
+6. Sobre os canais
+------------------
+Os canais vêm de listas públicas mantidas pelo projeto IPTV-org e de canais
+oficiais que transmitem o próprio sinal pela internet. Só canais abertos e
+gratuitos. Alguns podem sair do ar de vez em quando — nesse caso o app mostra
+"Canal indisponível no momento" e você escolhe outro.
+
+
+7. Comandos úteis
+-----------------
+     npm run dev        — abrir o app para usar
+     npm run test       — rodar os testes
+     npm run lint       — checar o código
+     npm run build      — gerar a versão final (pasta dist/)
+
+Para publicar o app na internet e ter um endereço fixo, use o painel do
+Lovable (botão Publish) ou hospede a pasta gerada em qualquer serviço.
